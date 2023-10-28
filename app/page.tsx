@@ -1,5 +1,5 @@
 import AcmeLogo from "@/app/ui/acme-logo";
-
+import Image from "next/image";
 import Link from "next/link";
 import { lusitana } from "./ui/fonts";
 export default function Page() {
@@ -25,7 +25,20 @@ export default function Page() {
                     </Link>
                 </div>
                 <div className="flex items-center justify-center p-6 md:w-3/5 md:px-28 md:py-12">
-                    {/* Add Hero Images Here */}
+                    <Image
+                        src="/hero-desktop.png"
+                        alt="Screenshots of the dashboard project showing desktop and mobile versions"
+                        width={1000}
+                        height={760}
+                        className="hidden md:block"
+                    />
+                    <Image
+                        src="/hero-mobile.png"
+                        alt="Screenshots of the dashboard project showing desktop and mobile versions"
+                        width={560}
+                        height={620}
+                        className="block md:hidden"
+                    />
                 </div>
             </div>
         </main>
